@@ -5,11 +5,11 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import App from "../App";
 
 // Tests
+render(<App />);
+const buttonCount = await screen.findByRole("button");
+const codeCount = await screen.queryByText(/The count is now:/);
 test("Renders main page correctly", async () => {
     // Setup
-    render(<App />);
-    const buttonCount = await screen.findByRole("button");
-    const codeCount = await screen.queryByText(/The count is now:/);
 
     // Pre Expecations
     expect(buttonCount.innerHTML).toBe("count is 0");
