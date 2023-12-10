@@ -14,7 +14,7 @@ export default function DetailModal() {
         <>
             {isOpen && product ?
                 <>
-                    <div onClick={modalClose} className={'back-layout'}
+                    <div role={'back-layout'} onClick={modalClose} className={'back-layout'}
                          style={{
                              cursor:'pointer',
                              position: "fixed",
@@ -23,7 +23,7 @@ export default function DetailModal() {
                              height: '100vh',
                              background: 'rgba(00,00,00,0.5)'
                          }}></div>
-                    <section className={'product-info'} style={{
+                    <section role={'product-info'} className={'product-info'} style={{
                         position: "fixed",
                         zIndex: 5001,
                         top: '50%',
@@ -35,7 +35,7 @@ export default function DetailModal() {
                                 <img src={product.thumbnail} alt={product.title +"의 이미지"} height={300} width={'100%'}/>
                             </div>
                             <div style={{color:'black', display:'flex', flexDirection:'column', gap:'4px'}} className={'product-info-box'}>
-                                <h3>
+                                <h3 data-testid="product-title">
                                     title: {product.title}
                                 </h3>
                                 <h4>

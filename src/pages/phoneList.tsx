@@ -17,7 +17,7 @@ export default function PhoneList() {
             {products.map(product =>
                 <div style={{cursor:'pointer', width: '200px', background: '#171717', padding: '20px', borderRadius: '12px'}}
                      key={product.id}>
-                    <div onClick={() => onClick(product)} className={'img-box'}>
+                    <div data-role={"img-box"} onClick={() => onClick(product)} className={'img-box'}>
                         <img src={product.thumbnail} alt={product.title + "소개사진"}
                              width={200} height={150}/>
                     </div>
