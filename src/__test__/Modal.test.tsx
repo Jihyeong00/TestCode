@@ -8,7 +8,7 @@ render(<>
     <UseDetailStore>
         <UseProductStore>
             <DetailModal/>
-            <PhoneList/>
+            <PhoneList fetchUrl={'./posts'}/>
         </UseProductStore>
     </UseDetailStore>
 </>)
